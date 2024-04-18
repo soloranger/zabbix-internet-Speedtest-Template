@@ -1,2 +1,2 @@
-# zabbix-internet-Speedtest-Template
-Monitor You internet Speed Test with Zabbix and Grafana Dashboard
+# Zabbix internet Speedtest template
+Monitor Your internet Speed Test with Zabbix and Grafana Dashboard
