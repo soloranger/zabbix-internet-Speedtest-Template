@@ -21,7 +21,7 @@
       }
     ]
   },
-  "description": "A dashboard for reporting results from speedtest-cli",
+  "description": "A dashboard for reporting results from speedtest, Author: Mahdi Shadi",
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
