@@ -1,0 +1,1666 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "datasource",
+          "uid": "grafana"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "target": {
+          "limit": 100,
+          "matchAny": false,
+          "tags": [],
+          "type": "dashboard"
+        },
+        "type": "dashboard"
+      }
+    ]
+  },
+  "description": "A dashboard for reporting results from speedtest-cli",
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 1,
+  "links": [],
+  "liveNow": false,
+  "panels": [
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "c8c9b686-096a-4de6-8689-ba6a2558a467"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "super-light-blue",
+            "mode": "fixed"
+          },
+          "decimals": 0,
+          "mappings": [],
+          "max": 0,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "super-light-blue",
+                "value": null
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 7,
+        "x": 0,
+        "y": 0
+      },
+      "id": 12,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "last"
+          ],
+          "fields": "/^Last value$/",
+          "values": false
+        },
+        "text": {
+          "valueSize": 40
+        },
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "10.2.3",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "ygXvXdB7k"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "Zabbix servers"
+          },
+          "groupBy": [],
+          "host": {
+            "filter": "speedtest"
+          },
+          "item": {
+            "filter": "Server City"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "measurement": "internet_speed",
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "orderByTime": "ASC",
+          "policy": "default",
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "2",
+          "refId": "A",
+          "resultFormat": "table",
+          "schema": 12,
+          "select": [
+            [
+              {
+                "params": [
+                  "isp"
+                ],
+                "type": "field"
+              }
+            ]
+          ],
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": [],
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "title": "ISP",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "c8c9b686-096a-4de6-8689-ba6a2558a467"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-GrYlRd"
+          },
+          "decimals": 0,
+          "mappings": [
+            {
+              "options": {
+                "1206": {
+                  "color": "super-light-blue",
+                  "index": 2,
+                  "text": "Pittsburgh, PA"
+                },
+                "1769": {
+                  "color": "super-light-blue",
+                  "index": 0,
+                  "text": "Plainfield, NJ"
+                },
+                "9840": {
+                  "color": "super-light-blue",
+                  "index": 1,
+                  "text": "New Castle, DE"
+                },
+                "10979": {
+                  "color": "super-light-blue",
+                  "index": 4,
+                  "text": "School District of Philadelphia"
+                },
+                "38024": {
+                  "color": "super-light-blue",
+                  "index": 3,
+                  "text": "Dataspindle, LLC"
+                }
+              },
+              "type": "value"
+            }
+          ],
+          "max": 0,
+          "min": 0,
+          "noValue": "n/a",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "super-light-blue",
+                "value": null
+              }
+            ]
+          },
+          "unit": "string"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 8,
+        "x": 7,
+        "y": 0
+      },
+      "id": 13,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "last"
+          ],
+          "fields": "/^Last value$/",
+          "values": false
+        },
+        "text": {
+          "valueSize": 40
+        },
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "10.2.3",
+      "targets": [
+        {
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "ygXvXdB7k"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "Zabbix servers"
+          },
+          "groupBy": [],
+          "host": {
+            "filter": "speedtest"
+          },
+          "item": {
+            "filter": "WAN IP"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "measurement": "internet_speed",
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "orderByTime": "ASC",
+          "policy": "default",
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "2",
+          "refId": "A",
+          "resultFormat": "table",
+          "schema": 12,
+          "select": [
+            [
+              {
+                "params": [
+                  "sid"
+                ],
+                "type": "field"
+              }
+            ]
+          ],
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": [],
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "title": "Test Server",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "c8c9b686-096a-4de6-8689-ba6a2558a467"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "super-light-blue",
+                "value": null
+              }
+            ]
+          },
+          "unit": "string"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 9,
+        "x": 15,
+        "y": 0
+      },
+      "id": 10,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "last"
+          ],
+          "fields": "/^URL$/",
+          "values": false
+        },
+        "text": {
+          "titleSize": 10
+        },
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "10.2.3",
+      "targets": [
+        {
+          "alias": "Result",
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "ygXvXdB7k"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "Zabbix servers"
+          },
+          "groupBy": [],
+          "host": {
+            "filter": "speedtest"
+          },
+          "item": {
+            "filter": "URL"
+          },
+          "itemTag": {
+            "filter": "Application: Speedtest"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "measurement": "internet_speed",
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "orderByTime": "ASC",
+          "policy": "default",
+          "proxy": {
+            "filter": ""
+          },
+          "query": "SELECT \"result\" as \"Result\" FROM \"internet_speed\"",
+          "queryType": "2",
+          "rawQuery": false,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "select": [
+            [
+              {
+                "params": [
+                  "result"
+                ],
+                "type": "field"
+              }
+            ]
+          ],
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": [],
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "title": "Result URL",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "c8c9b686-096a-4de6-8689-ba6a2558a467"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-GrYlRd"
+          },
+          "decimals": 1,
+          "mappings": [
+            {
+              "options": {
+                "from": 0,
+                "result": {
+                  "color": "light-red",
+                  "index": 0
+                },
+                "to": 149
+              },
+              "type": "range"
+            },
+            {
+              "options": {
+                "from": 150,
+                "result": {
+                  "color": "light-yellow",
+                  "index": 1
+                },
+                "to": 274
+              },
+              "type": "range"
+            },
+            {
+              "options": {
+                "from": 275,
+                "result": {
+                  "color": "light-green",
+                  "index": 2
+                },
+                "to": 1000
+              },
+              "type": "range"
+            }
+          ],
+          "max": 0,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "Mbits"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 0,
+        "y": 3
+      },
+      "id": 5,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "10.2.3",
+      "targets": [
+        {
+          "alias": "Download",
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "ygXvXdB7k"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "Zabbix servers"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "host": {
+            "filter": "speedtest"
+          },
+          "item": {
+            "filter": "Download(Mbps)"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "measurement": "internet_speed",
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "orderByTime": "ASC",
+          "policy": "default",
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "select": [
+            [
+              {
+                "params": [
+                  "download"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": [],
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "title": "Download",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "c8c9b686-096a-4de6-8689-ba6a2558a467"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-GrYlRd"
+          },
+          "decimals": 1,
+          "mappings": [
+            {
+              "options": {
+                "from": 0,
+                "result": {
+                  "color": "light-red",
+                  "index": 0
+                },
+                "to": 149
+              },
+              "type": "range"
+            },
+            {
+              "options": {
+                "from": 150,
+                "result": {
+                  "color": "light-yellow",
+                  "index": 1
+                },
+                "to": 274
+              },
+              "type": "range"
+            },
+            {
+              "options": {
+                "from": 275,
+                "result": {
+                  "color": "light-green",
+                  "index": 2
+                },
+                "to": 1000
+              },
+              "type": "range"
+            }
+          ],
+          "max": 0,
+          "min": 0,
+          "noValue": "n/a",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "Mbits"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 6,
+        "x": 6,
+        "y": 3
+      },
+      "id": 6,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "10.2.3",
+      "targets": [
+        {
+          "alias": "Upload",
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "ygXvXdB7k"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "Zabbix servers"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "host": {
+            "filter": "speedtest"
+          },
+          "item": {
+            "filter": "Upload(Mbps)"
+          },
+          "itemTag": {
+            "filter": "Application: Speedtest"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "measurement": "internet_speed",
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "orderByTime": "ASC",
+          "policy": "default",
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "select": [
+            [
+              {
+                "params": [
+                  "upload"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": [],
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "title": "Upload",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "c8c9b686-096a-4de6-8689-ba6a2558a467"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-GrYlRd"
+          },
+          "decimals": 1,
+          "mappings": [
+            {
+              "options": {
+                "from": 0,
+                "result": {
+                  "color": "light-green",
+                  "index": 0
+                },
+                "to": 20
+              },
+              "type": "range"
+            },
+            {
+              "options": {
+                "from": 21,
+                "result": {
+                  "color": "light-yellow",
+                  "index": 1
+                },
+                "to": 79
+              },
+              "type": "range"
+            },
+            {
+              "options": {
+                "from": 80,
+                "result": {
+                  "color": "light-red",
+                  "index": 2
+                },
+                "to": 1000
+              },
+              "type": "range"
+            }
+          ],
+          "max": 0,
+          "min": 0,
+          "noValue": "n/a",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "ms"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 4,
+        "x": 12,
+        "y": 3
+      },
+      "id": 7,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "text": {
+          "valueSize": 60
+        },
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "10.2.3",
+      "targets": [
+        {
+          "alias": "Ping",
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "ygXvXdB7k"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "Zabbix servers"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "host": {
+            "filter": "speedtest"
+          },
+          "item": {
+            "filter": "Ping(ms)"
+          },
+          "itemTag": {
+            "filter": ""
+          },
+          "macro": {
+            "filter": ""
+          },
+          "measurement": "internet_speed",
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "orderByTime": "ASC",
+          "policy": "default",
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "select": [
+            [
+              {
+                "params": [
+                  "ping"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": [],
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "title": "Ping",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "c8c9b686-096a-4de6-8689-ba6a2558a467"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-GrYlRd"
+          },
+          "decimals": 1,
+          "mappings": [
+            {
+              "options": {
+                "from": 0,
+                "result": {
+                  "color": "light-green",
+                  "index": 0
+                },
+                "to": 4
+              },
+              "type": "range"
+            },
+            {
+              "options": {
+                "from": 5,
+                "result": {
+                  "color": "light-red",
+                  "index": 1
+                }
+              },
+              "type": "range"
+            }
+          ],
+          "max": 0,
+          "min": 0,
+          "noValue": "n/a",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "ms"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 4,
+        "x": 16,
+        "y": 3
+      },
+      "id": 8,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "text": {
+          "valueSize": 60
+        },
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "10.2.3",
+      "targets": [
+        {
+          "alias": "Jitter",
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "ygXvXdB7k"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "Zabbix servers"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "host": {
+            "filter": "speedtest"
+          },
+          "item": {
+            "filter": "Jitter (ms)"
+          },
+          "itemTag": {
+            "filter": "Application: Speedtest"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "measurement": "internet_speed",
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "orderByTime": "ASC",
+          "policy": "default",
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "select": [
+            [
+              {
+                "params": [
+                  "jitter"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": [],
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "title": "Jitter",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "c8c9b686-096a-4de6-8689-ba6a2558a467"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds",
+            "seriesBy": "last"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 30,
+            "gradientMode": "opacity",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "red",
+                "value": null
+              },
+              {
+                "color": "green",
+                "value": 300
+              },
+              {
+                "color": "dark-blue",
+                "value": 320
+              }
+            ]
+          },
+          "unit": "Mbits"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Upload(Mbps)"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "green",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 10,
+        "w": 12,
+        "x": 0,
+        "y": 8
+      },
+      "id": 2,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "alias": "Download Speed",
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "ygXvXdB7k"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "Zabbix servers"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "host": {
+            "filter": "speedtest"
+          },
+          "item": {
+            "filter": "Download(Mbps)"
+          },
+          "itemTag": {
+            "filter": "Application: Speedtest"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "measurement": "internet_speed",
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "orderByTime": "ASC",
+          "policy": "default",
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "select": [
+            [
+              {
+                "params": [
+                  "download"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "distinct"
+              }
+            ]
+          ],
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": [],
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "alias": "Upload Speed",
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "ygXvXdB7k"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "Zabbix servers"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "host": {
+            "filter": "speedtest"
+          },
+          "item": {
+            "filter": "Upload(Mbps)"
+          },
+          "itemTag": {
+            "filter": "Application: Speedtest"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "measurement": "internet_speed",
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "orderByTime": "ASC",
+          "policy": "default",
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "select": [
+            [
+              {
+                "params": [
+                  "upload"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "distinct"
+              }
+            ]
+          ],
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": [],
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "title": "Speed History",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "alexanderzobnin-zabbix-datasource",
+        "uid": "c8c9b686-096a-4de6-8689-ba6a2558a467"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds",
+            "seriesBy": "last"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 30,
+            "gradientMode": "opacity",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "#EAB839",
+                "value": 3
+              },
+              {
+                "color": "red",
+                "value": 5
+              }
+            ]
+          },
+          "unit": "ms"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 10,
+        "w": 12,
+        "x": 12,
+        "y": 8
+      },
+      "id": 3,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "alias": "Ping",
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "ygXvXdB7k"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "Zabbix servers"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "host": {
+            "filter": "speedtest"
+          },
+          "item": {
+            "filter": "Ping(ms)"
+          },
+          "itemTag": {
+            "filter": "Application: Speedtest"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "measurement": "internet_speed",
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "orderByTime": "ASC",
+          "policy": "default",
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "select": [
+            [
+              {
+                "params": [
+                  "ping"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "distinct"
+              }
+            ]
+          ],
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": [],
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        },
+        {
+          "alias": "Jitter",
+          "application": {
+            "filter": ""
+          },
+          "countTriggersBy": "",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "ygXvXdB7k"
+          },
+          "evaltype": "0",
+          "functions": [],
+          "group": {
+            "filter": "Zabbix servers"
+          },
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "host": {
+            "filter": "speedtest"
+          },
+          "item": {
+            "filter": "Jitter (ms)"
+          },
+          "itemTag": {
+            "filter": "Application: Speedtest"
+          },
+          "macro": {
+            "filter": ""
+          },
+          "measurement": "internet_speed",
+          "options": {
+            "count": false,
+            "disableDataAlignment": false,
+            "showDisabledItems": false,
+            "skipEmptyValues": false,
+            "useTrends": "default",
+            "useZabbixValueMapping": false
+          },
+          "orderByTime": "ASC",
+          "policy": "default",
+          "proxy": {
+            "filter": ""
+          },
+          "queryType": "0",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "schema": 12,
+          "select": [
+            [
+              {
+                "params": [
+                  "jitter"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "distinct"
+              }
+            ]
+          ],
+          "table": {
+            "skipEmptyValues": false
+          },
+          "tags": [],
+          "textFilter": "",
+          "trigger": {
+            "filter": ""
+          }
+        }
+      ],
+      "title": "Latency History",
+      "type": "timeseries"
+    }
+  ],
+  "refresh": "30m",
+  "schemaVersion": 39,
+  "tags": [
+    "speedtest",
+    "network performance",
+    "internet"
+  ],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-30d",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "Network Speed Monitor",
+  "uid": "dkTtVQank",
+  "version": 15,
+  "weekStart": "sunday"
+}
