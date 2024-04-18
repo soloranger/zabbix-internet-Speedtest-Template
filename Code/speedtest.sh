@@ -5,12 +5,13 @@ FILE=/tmp/result.json
 while getopts s:f: flag
 do
     case "${flag}" in
-        s) server=${OPTARG};;
+        s) server=${OPTARG};; #Server-id argument 
         f) format=${OPTARG};;
     esac
 done
 
 #RUN Speedtest
+
 echo "Speedtest has been Started"
 speedtest --server-id=$server --format=json >> $FILE
 
